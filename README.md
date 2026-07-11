@@ -1,7 +1,7 @@
 # Deutschlandticket Adoption Potential Assessment
 Johnson & Johnson Medical GmbH — Norderstedt, Hamburg
 
-##1. Objective
+## 1. Objective
 
 J&J wants to understand how likely employees are to adopt the Deutschlandticket (Germany's subsidized nationwide public transport pass) for their commute to the Norderstedt office. The analysis answers four practical questions:
 
@@ -10,14 +10,14 @@ J&J wants to understand how likely employees are to adopt the Deutschlandticket 
 - Which employees are the most realistic candidates to switch from car to public transport?
 - What factors most strongly separate "likely to switch" employees from "unlikely to switch" employees?
 
-##2. Data Sources
+## 2. Data Sources
 
 - HVV GTFS feed (stops.txt, stop_times.txt, trips.txt, calendar.txt, routes.txt, shapes.txt, transfers.txt)
 - Official Hamburg public transport network — stop locations, schedules, routes
 - Synthetic employee dataset (generated in-notebook)2,000 simulated employees, since real HR data wasn't available for this assessment. Home locations are distributed across realistic Hamburg-area districts (weighted toward areas with more commuters into Norderstedt)
 - Google Maps Platform — Routes API with transit and driving travel times/distances
 
-##3. Pipeline — Step by Step
+## 3. Pipeline — Step by Step
 
 Step 1 — Synthetic Employee Generation
 
@@ -72,7 +72,7 @@ A Folium-based interactive HTML map visualizes:
 
 Each layer can be toggled on/off independently, allowing focused exploration (e.g. "show me only the High-potential employees" or "show me only the 60+ minute commuters").
 
-##4. Methodology Notes — Why Google Routes API Instead of Pure GTFS Routing
+## 4. Methodology Notes — Why Google Routes API Instead of Pure GTFS Routing
 
 An initial approach attempted to compute exact multi-transfer journeys directly from the GTFS schedule data. This gives the most precise answer for an exact date, but was ultimately replaced with the Google Routes API for the final pipeline because:
 
