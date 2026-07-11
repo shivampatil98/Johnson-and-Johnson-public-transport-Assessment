@@ -1,0 +1,14 @@
+*.csv
+*.pdf
+*.doc
+*.parquet
+*.crdownload
+*.ZIP
+*.zip
+temp_map.html
+commute_map.html
+~$*
+Final/
+HVV/
+Upload__hvv/
+public/
